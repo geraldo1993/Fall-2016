@@ -1,13 +1,13 @@
-#!/usr/bin/env python
+# Author:Geraldo Braho
 process_queue = []
 total_wtime = 0
-n = int(raw_input('Enter the total no of processes: '))
+n = int(raw_input('Enter the total numbers of processes: '))
 for i in xrange(n):
     process_queue.append([])#append a list object to the list
-    process_queue[i].append(raw_input('Enter p_name: '))
-    process_queue[i].append(int(raw_input('Enter p_arrival: ')))
+    process_queue[i].append(raw_input('Enter process name: '))
+    process_queue[i].append(int(raw_input('Enter process arrival Time : ')))
     total_wtime += process_queue[i][1]
-    process_queue[i].append(int(raw_input('Enter p_bust: ')))
+    process_queue[i].append(int(raw_input('Enter Process CPU bustTime : ')))
     print ''
 
 process_queue.sort(key = lambda process_queue:process_queue[1])
